@@ -1,10 +1,11 @@
 # Clock
 Bright bold Clock
-let num = [];
-let wid;
-let cx,cy;
 
-function setup() {
+	{ let num = [];
+	let wid;
+	let cx,cy;
+
+	function setup() {
 	createCanvas(windowWidth, windowHeight);
 	rectMode(CENTER);
 	num[0] = [1, 1, 1, 1, 1, 1, 0];
@@ -21,14 +22,14 @@ function setup() {
 	cy = height/2
 	wid = width;
 	if(width>height)wid = height;
-}
+	
 
-let c = ('magenta');
-fill(c);
-noStroke();
-rect(20, 20, 60, 60);
+	let c = ('magenta');
+	fill(c);
+	noStroke();
+	rect(20, 20, 60, 60);
 
-function draw() {
+	function draw() {
 	let hou = hour();
 	let min = minute();
 	background('magenta');
@@ -42,9 +43,9 @@ function draw() {
 		triangle(cx, cy-wid*0.1, wid*0.06);
 		triangle(cx, cy+wid*0.1, wid*0.06);
 	}
-}
+	}
 
-function displayNum(x, y, w, h, n){
+	function displayNum(x, y, w, h, n){
 	let nn = num[n][0];
 	let sw = w*0.23;
 	let off = w*0.404;
@@ -56,5 +57,6 @@ function displayNum(x, y, w, h, n){
 	if(num[n][5])rect(x-w/2, y - h/4, sw, (h/2)-off);
 	if(num[n][6])rect(x, y, w-off, sw);
 	
-}
+	}
+	
 
